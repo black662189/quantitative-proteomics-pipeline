@@ -16,3 +16,5 @@
 - 初次误用父级metabolomics Python环境时缺少matplotlib；改用该流程自己的venv后通过，没有安装或更改共享环境。
 - `alt_chen`本次仅做shell/R/Python语法检查，没有再次执行完整真实项目。
 - 没有本次浏览器交互测试；既有交互测试代码作为源码保留。
+
+Git发布时统一文本换行为LF，源清单保留原始服务器字节校验值；publication_sha256.json记录Git索引中发布文件的SHA-256（不含清单自身）。换行标准化不改变统计实现。
