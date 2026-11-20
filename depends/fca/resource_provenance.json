@@ -1,0 +1,19 @@
+{
+  "code": "fca",
+  "taxid": 9685,
+  "name": "猫",
+  "resources": [
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_F.catus_Fca126_mat1.0_NCBI_release_105/fca.kegg_optimal.symbol.gmt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/fca/KEGG.gmt",
+      "sha256": "3e0c91f9a203b450053c827aa7e2e0e6191a4d9587f518bfde0f473aec57fe44"
+    },
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_F.catus_Fca126_mat1.0_NCBI_release_105/rename.uniq.9685.protein.links.v12.0.txt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/fca/PPI.tsv",
+      "sha256": "8c35115a5a7def98f737a98c821604e4f6193fa6f110d0ea65d8b6674b8b2fcb"
+    }
+  ],
+  "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/fca/species.yaml",
+  "validation": "database integrity only; biological example validated only for hsa/fca"
+}

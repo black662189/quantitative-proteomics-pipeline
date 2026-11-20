@@ -1,0 +1,19 @@
+{
+  "code": "cfa",
+  "taxid": 9615,
+  "name": "犬",
+  "resources": [
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_ROS_Cfam_1.0_NCBI_release_106/cfa.kegg_optimal.symbol.gmt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/cfa/KEGG.gmt",
+      "sha256": "9083fe42cb248d7eb75c6f4e28ca8d8f6d0918a3d797f31b11b546dc5b6b9a03"
+    },
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_ROS_Cfam_1.0_NCBI_release_106/rename.uniq.9615.protein.links.v11.5.txt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/cfa/PPI.tsv",
+      "sha256": "cb5db0ca56a3650f804d1697f8866a16dd3899a57e037196af9b2b4c6a6650f2"
+    }
+  ],
+  "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/cfa/species.yaml",
+  "validation": "database integrity only; biological example validated only for hsa/fca"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "mcf",
+  "taxid": 9541,
+  "name": "食蟹猴",
+  "resources": [
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Mfa_MFA1912RKSv2_NCBI_release_102/mcf.kegg_optimal.symbol.gmt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/KEGG.gmt",
+      "sha256": "045ebe35bd85e2591585d336668590f573877da28dcca8061aae7579f14125a8"
+    },
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Mfa_MFA1912RKSv2_NCBI_release_102/rename.uniq.9541.protein.links.v11.0.ensemble.v2.txt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/PPI.tsv",
+      "sha256": "7d14d15c562380cacd9ee0793a22d3314e6a3401f882ad924ea500e7ed27cd60"
+    }
+  ],
+  "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/species.yaml",
+  "validation": "database integrity only; biological example validated only for hsa/fca"
+}

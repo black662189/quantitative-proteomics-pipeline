@@ -1,0 +1,19 @@
+{
+  "code": "mcc",
+  "taxid": 9544,
+  "name": "恒河猴",
+  "resources": [
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Mmul_10_NCBI_release_103/mcc.kegg_optimal.symbol.gmt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/KEGG.gmt",
+      "sha256": "027267fef35e37bf7ec631a12e0736915dfc035a70b7c1072e014b8db97778c9"
+    },
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Mmul_10_NCBI_release_103/9544.protein_symbol.PPI.txt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/PPI.tsv",
+      "sha256": "42cf52eeb243a14d878db4753dfd7aefa59841dd8bc6d70c326e1fa6835f7141"
+    }
+  ],
+  "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/species.yaml",
+  "validation": "database integrity only; biological example validated only for hsa/fca"
+}

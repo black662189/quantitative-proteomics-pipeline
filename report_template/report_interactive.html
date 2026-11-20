@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>蛋白质组 · 交互报告</title><style>/*INLINE_CSS*/</style>
+<script>/*INLINE_PLOTLY*/</script></head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><span class="brand-mark">P</span> 蛋白质组分析</div>
+  <p class="sidebar-label">交互报告 · v1.2</p>
+  <nav aria-label="分析模块">
+    <button id="nav-protein" class="nav active" aria-pressed="true">01　差异蛋白</button>
+    <button id="nav-sample" class="nav" aria-pressed="false">02　样本与 PCA</button>
+    <button id="nav-qc" class="nav" aria-pressed="false">03　数据质控</button>
+    <button id="nav-heatmap" class="nav" aria-pressed="false">04　蛋白热图</button>
+    <button id="nav-ora" class="nav" aria-pressed="false">05　GO / KEGG</button>
+    <button id="nav-gsea" class="nav" aria-pressed="false">06　GSEA</button>
+    <button id="nav-gsva" class="nav" aria-pressed="false">07　GSVA</button>
+    <button id="nav-ppi" class="nav" aria-pressed="false">08　PPI 网络</button>
+    <button id="nav-files" class="nav" aria-pressed="false">09　方法与文件</button>
+  </nav>
+  <div class="sidebar-bottom"><strong id="species"></strong><p id="project-counts"></p><p>数据保留在本地<br>无需联网查看</p></div>
+</aside>
+<main>
+  <header><div class="eyebrow">QUANTITATIVE PROTEOMICS</div><h1 id="project-title"></h1><p class="subtitle">点击图中的点，查看蛋白或样本详情。图中可框选缩放，双击恢复。</p></header>
+  <section id="protein-page">
+    <div class="section-head"><div><h2>差异蛋白探索</h2><p id="comparison-note"></p></div>
+      <label>比较组<select id="contrast-select"></select></label></div>
+    <div class="metrics" id="contrast-metrics"></div>
+    <div class="split">
+      <article class="panel"><div class="panel-heading"><h3>火山图</h3><button class="text-button" id="export-volcano">导出 SVG</button></div>
+        <p class="hint">橙红：升高　蓝：降低　灰：未显著。点击任意蛋白查看右侧详情。</p>
+        <div id="volcano" class="plot"></div><p class="chart-foot" id="volcano-note"></p></article>
+      <article class="panel detail" aria-live="polite"><div class="panel-heading"><h3>蛋白详情</h3><span id="protein-direction" class="badge"></span></div>
+        <h2 id="protein-gene"></h2><p class="mono" id="protein-id"></p><p class="description" id="protein-description"></p>
+        <div class="detail-stats" id="protein-statistics"></div><div id="protein-abundance" class="plot detail-plot"></div>
+        <p class="chart-foot" id="protein-note"></p>
+        <details><summary>查看各样本丰度</summary><div id="abundance-table" class="table-wrap"></div></details>
+      </article>
+    </div>
+    <article class="panel results-panel"><div class="panel-heading"><h3>蛋白结果表</h3><button id="download-results" class="text-button">下载当前筛选 TSV</button></div>
+      <div class="table-controls"><label class="search-label">搜索蛋白或基因<input id="protein-search" type="search" placeholder="蛋白 ID、基因名或描述"></label>
+        <label>筛选<select id="protein-filter"><option value="all">全部蛋白</option><option value="sig">正式差异</option><option value="Up">升高</option><option value="Down">降低</option><option value="Not_tested">未检验</option></select></label>
+        <label>排序<select id="protein-sort"><option value="fdr">校正 P 值</option><option value="effect">|log2FC|</option><option value="gene">基因名</option></select></label>
+      </div><p id="table-status" class="hint" aria-live="polite"></p>
+      <div class="table-wrap"><table><thead><tr><th>蛋白 ID</th><th>基因</th><th>log2FC</th><th>原始 P</th><th>BH 校正 P</th><th>状态</th></tr></thead><tbody id="protein-rows"></tbody></table></div>
+      <div class="pagination"><button id="previous-page">上一页</button><span id="page-number"></span><button id="next-page">下一页</button></div>
+    </article>
+  </section>
+  <section id="qc-page" hidden>
+    <div class="section-head"><div><h2>数据质控</h2><p>查看检出、缺失和丰度分布；点击样本可进入样本详情。</p></div><label>指标<select id="qc-metric"><option value="observed">检出蛋白数</option><option value="missing_fraction">缺失比例</option></select></label></div>
+    <div class="split"><article class="panel"><h3>样本检出与缺失</h3><div id="qc-bars" class="plot"></div></article><article class="panel"><h3>已处理的丰度分布</h3><div id="qc-boxes" class="plot"></div><p class="chart-foot">只使用观测值；同组颜色固定，不把缺失值画成零。</p></article></div>
+    <article class="panel"><h3>样本相关性</h3><div id="qc-correlation" class="plot"></div><p class="chart-foot">Pearson相关性，成对共同观测至少3个蛋白；空白表示不可计算。点击单元格查看横轴样本。</p></article>
+  </section>
+  <section id="heatmap-page" hidden>
+    <div class="section-head"><div><h2>蛋白丰度热图</h2><p>点击单元格查看蛋白详情；悬停可查看样本、原丰度和显示值。</p></div><label>比较组<select class="shared-contrast"></select></label></div>
+    <article class="panel"><div class="table-controls">
+      <label>蛋白集合<select id="hm-set"><option value="sig">正式差异蛋白</option><option value="variance">高变蛋白（探索性）</option></select></label>
+      <label>显示数量<select id="hm-count"><option>20</option><option selected>40</option><option>60</option></select></label>
+      <label>显示尺度<select id="hm-scale"><option value="z">行 Z-score</option><option value="log">已处理 log2 丰度</option></select></label>
+      <label class="search-label">限定蛋白/基因关键词<input id="hm-search" type="search" placeholder="可选；多个词用逗号分隔"></label>
+    </div><p id="hm-note" class="hint"></p><div id="protein-heatmap" class="plot tall-plot"></div></article>
+  </section>
+  <section id="ora-page" hidden>
+    <div class="section-head"><div><h2>GO / KEGG 过度代表分析</h2><p>点击条目查看命中的正式差异蛋白。</p></div><label>比较组<select class="shared-contrast"></select></label></div>
+    <div class="table-controls"><label>数据库<select id="ora-db" class="database-select"></select></label><label>方向<select id="ora-direction"><option value="All">全部正式差异</option><option value="Up">升高</option><option value="Down">降低</option></select></label>
+      <label>显示范围<select id="ora-significance"><option value="significant">BH 显著条目</option><option value="all">全部有命中条目（含未显著）</option></select></label><label class="search-label">搜索条目<input id="ora-search" type="search"></label></div>
+    <div class="split"><article class="panel"><h3>富集气泡图</h3><div id="ora-plot" class="plot tall-plot"></div><p class="chart-foot" id="ora-note"></p></article>
+    <article class="panel"><h3>条目详情</h3><h2 id="ora-title" class="term-title"></h2><div id="ora-stats" class="detail-stats"></div><div id="ora-proteins" class="table-wrap"></div><p class="chart-foot">基因可对应多个保留蛋白；点击蛋白ID查看原始蛋白级统计，未将蛋白合并为新统计量。</p></article></div>
+    <article class="panel"><div class="panel-heading"><h3>筛选结果</h3><button id="ora-export" class="text-button">导出当前筛选 TSV</button></div><div id="ora-table" class="table-wrap"></div></article>
+  </section>
+  <section id="gsea-page" hidden>
+    <div class="section-head"><div><h2>GSEA 排序富集</h2><p>基于全部受检蛋白的排序，不要求先有正式差异蛋白。</p></div><label>比较组<select class="shared-contrast"></select></label></div>
+    <div class="table-controls"><label>数据库<select id="gsea-db" class="database-select"></select></label><label>显示范围<select id="gsea-significance"><option value="significant">BH 显著条目</option><option value="all">全部受检条目（含未显著）</option></select></label><label class="search-label">搜索通路<input id="gsea-search" type="search"></label></div>
+    <div class="split"><article class="panel"><h3>NES 概览</h3><div id="gsea-overview" class="plot tall-plot"></div><p class="chart-foot" id="gsea-note"></p></article>
+    <article class="panel"><h3>所选通路</h3><h2 id="gsea-title" class="term-title"></h2><div id="gsea-stats" class="detail-stats"></div><p class="chart-foot">正NES为处理组方向，负NES为对照组方向；显著性以BH校正P判断。</p></article></div>
+    <article class="panel"><div class="panel-heading"><h3>标准富集曲线</h3><button id="gsea-curve-export" class="text-button">导出 SVG</button></div><div id="gsea-curve" class="plot curve-plot"></div><p class="chart-foot">从上到下：运行富集分数、通路基因命中位置、排序统计量。点击命中线可查看基因对应蛋白。</p><div id="gsea-gene-focus"></div></article>
+    <article class="panel"><h3>核心富集基因（leading edge）</h3><div id="gsea-leading" class="table-wrap"></div></article>
+    <article class="panel"><div class="panel-heading"><h3>筛选结果</h3><button id="gsea-export" class="text-button">导出当前筛选 TSV</button></div><div id="gsea-table" class="table-wrap"></div></article>
+  </section>
+  <section id="gsva-page" hidden>
+    <div class="section-head"><div><h2>GSVA 通路分数</h2><p id="gsva-coverage"></p></div><label>比较组<select class="shared-contrast"></select></label></div>
+    <div class="table-controls"><label>数据库<select id="gsva-db" class="database-select"></select></label><label>排序 / 筛选<select id="gsva-order"><option value="fdr">差异BH校正P</option><option value="significant">仅显著差异</option><option value="variance">样本间方差（探索性）</option></select></label><label class="search-label">搜索通路<input id="gsva-search" type="search"></label></div>
+    <article class="panel"><h3>通路 × 样本</h3><div id="gsva-heatmap" class="plot tall-plot"></div><p id="gsva-note" class="chart-foot"></p></article>
+    <div class="split"><article class="panel"><h3 id="gsva-title" class="term-title">所选通路</h3><div id="gsva-abundance" class="plot"></div><p class="chart-foot">GSVA分数并非蛋白丰度或Fold Change；配对时灰线连接同一个体。</p></article>
+    <article class="panel"><h3>通路差异结果</h3><div id="gsva-stats" class="detail-stats"></div><div id="gsva-values" class="table-wrap"></div></article></div>
+    <article class="panel"><div class="panel-heading"><h3>筛选结果</h3><button id="gsva-export" class="text-button">导出当前筛选 TSV</button></div><div id="gsva-table" class="table-wrap"></div></article>
+  </section>
+  <section id="ppi-page" hidden>
+    <div class="section-head"><div><h2>蛋白相互作用网络</h2><p>仅展示正式差异基因间的高置信 STRING 相互作用。</p></div><label>比较组<select class="shared-contrast"></select></label></div>
+    <div class="split"><article class="panel"><h3>相互作用网络</h3><div id="ppi-plot" class="plot"></div><p id="ppi-note" class="chart-foot"></p></article><article class="panel"><h3 id="ppi-gene">点击节点查看蛋白</h3><div id="ppi-proteins" class="table-wrap"></div></article></div>
+    <article class="panel"><div class="panel-heading"><h3>全量相互作用</h3><button id="ppi-export" class="text-button">导出 TSV</button></div><div id="ppi-table" class="table-wrap"></div></article>
+  </section>
+  <section id="files-page" hidden>
+    <div class="section-head"><h2>分析汇总、方法与结果文件</h2></div>
+    <article class="panel"><h3>各比较的蛋白差异汇总</h3><div id="summary-table" class="table-wrap"></div><p class="chart-foot">raw_p_candidates仅是未校正P值候选，不等同于正式差异蛋白。</p></article>
+    <article class="panel"><h3>功能模块执行记录</h3><div id="module-status" class="table-wrap"></div></article>
+    <article class="panel"><h3>方法与复现</h3><p>已搜库蛋白定量表 → 鉴定信息过滤 → log2转换及指定归一化 → 样本质控 → limma差异分析 → GO/KEGG、GSEA、GSVA及PPI → 本交互报告。</p>
+    <p>完整参数、输入校验值、统计模型和软件版本在下方文件中归档。<a href="proteomics_static_report.html">查看完整方法与静态报告</a>。交互页切换、搜索和筛选不改变统计模型或显著性阈值。</p>
+    <p>GSEA曲线按原始排序和原始基因集重建，构建时逐条核对ES与fgsea输出一致。GSVA使用完整观测基因；不同数据库及比较分别进行BH校正。</p></article>
+    <article class="panel"><div class="panel-heading"><h3>结果文件</h3></div><label>按文件名搜索<input id="file-search" type="search" placeholder="例如 GSEA、GSVA、DEP 或 sessionInfo"></label><div id="file-list" class="file-list"></div><p class="chart-foot">图表和交互数据已嵌入本HTML；下载原始结果文件需保留交付包中的Report和image目录。</p></article>
+  </section>
+  <section id="sample-page" hidden>
+    <div class="section-head"><div><h2>样本与 PCA</h2><p>分组颜色在 PCA 和蛋白丰度图中保持一致。</p></div><label>选择样本<select id="sample-select"></select></label></div>
+    <div class="split"><article class="panel"><div class="panel-heading"><h3>主成分分析</h3><button id="export-pca" class="text-button">导出 SVG</button></div><p class="hint">点击样本点查看信息；颜色表示组别，菱形描边标记当前样本。</p><div id="pca" class="plot"></div><p class="chart-foot" id="pca-note"></p></article>
+      <article class="panel detail" aria-live="polite"><div class="panel-heading"><h3>样本详情</h3><span class="badge" id="sample-group"></span></div><h2 id="sample-name"></h2>
+        <div id="sample-metadata" class="metadata"></div><div id="sample-metrics" class="detail-stats"></div>
+        <h3 class="small-heading">该样本的蛋白丰度分布</h3><div id="sample-distribution" class="plot detail-plot"></div>
+        <p class="chart-foot">已处理的 log2 丰度；仅包含观测值，不填补缺失值。</p></article>
+    </div>
+    <article class="panel"><div class="panel-heading"><h3>全部样本</h3></div><div id="sample-table" class="table-wrap"></div></article>
+  </section>
+  <details class="methods"><summary>数据说明、分析假设与绘图来源</summary>
+    <p>本交互页读取分析结果，不重新计算差异检验或改变显著性阈值。正式差异以流程的 BH 校正 P 和 Fold Change 双阈值判定。未检验不等于无差异。PCA使用全部生物学样本完整观测且非恒定的蛋白；二维距离不能单独作为删除样本的依据。</p>
+    <p id="processing-note"></p><ul id="input-warnings"></ul>
+    <p>图形类别与交互方式参考 <a href="https://alphapeptstats.readthedocs.io/en/latest/functions.html" target="_blank" rel="noopener">AlphaPeptStats 官方文档</a>。实际使用 Plotly.js 3.1.0（MIT）；蛋白/样本详情联动由本项目补充开发，未运行 AlphaPeptStats 的统计分析。<a href="https://plotly.com/javascript/click-events/" target="_blank" rel="noopener">Plotly 点击事件文档</a>。</p>
+  </details>
+  <footer>蛋白质组交互报告 · v1.2 · 离线查看 · 图表内置PNG导出</footer>
+</main>
+<script id="report-data" type="application/json">PAYLOAD_JSON</script>
+<script>/*INLINE_APP*/</script>
+<script>/*INLINE_MODULES*/</script>
+</body></html>

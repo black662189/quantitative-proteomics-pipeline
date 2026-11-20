@@ -1,0 +1,30 @@
+{
+  "url": "https://rest.uniprot.org/uniprotkb/stream?query=organism_id%3A9541&format=tsv&fields=accession%2Cgene_primary%2Cgo_p%2Cgo_c%2Cgo_f",
+  "taxid": "9541",
+  "retrieved_utc": "2026-10-20T07:54:22.774140+00:00",
+  "sha256": "7900ddd05b20d4aa1da0e47500d31bd61c37b4407005b5870d9edff165cc78af",
+  "headers": {
+    "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent",
+    "Cache-Control": "public, max-age=43200",
+    "Content-Type": "text/plain;format=tsv",
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+    "X-API-Deployment-Date": "15-October-2026",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "Date": "Tue, 20 Oct 2026 08:06:49 GMT",
+    "Access-Control-Max-Age": "1728000",
+    "X-UniProt-Release": "2026_03",
+    "Transfer-Encoding": "chunked",
+    "Access-Control-Allow-Origin": "*",
+    "Connection": "close",
+    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+    "X-UniProt-Release-Date": "02-September-2026"
+  },
+  "counts": {
+    "GO_BP": 2559,
+    "GO_CC": 634,
+    "GO_MF": 1354
+  },
+  "scope": "Direct UniProt annotations, no ancestor propagation; human reviewed proteins only, other species all entries."
+}

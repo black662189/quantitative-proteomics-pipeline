@@ -1,0 +1,26 @@
+species: ssc
+taxid: 9823
+gene_sets:
+- name: KEGG
+  taxid: 9823
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/KEGG.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_BP
+  taxid: 9823
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/GO_BP.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_CC
+  taxid: 9823
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/GO_CC.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_MF
+  taxid: 9823
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/GO_MF.gmt
+  min_size: 5
+  max_size: 500
+ppi:
+  taxid: 9823
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/PPI.tsv

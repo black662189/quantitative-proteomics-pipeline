@@ -1,0 +1,19 @@
+{
+  "code": "rno",
+  "taxid": 10116,
+  "name": "大鼠",
+  "resources": [
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_rno_Rnor_6.0_Ensembl_release_90/rno.kegg_optimal.symbol.gmt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/KEGG.gmt",
+      "sha256": "f6ba4e530176890449532abc47367033bcf7e6e98707447c1bf67357c7f0c95f"
+    },
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_rno_Rnor_6.0_Ensembl_release_90/rename.uniq.10116.protein.links.v11.0.txt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/PPI.tsv",
+      "sha256": "7581d7bbe4309d73402be3c5d3d6ea975af0f5a031c94e9fbd941a792df8fdb7"
+    }
+  ],
+  "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/species.yaml",
+  "validation": "database integrity only; biological example validated only for hsa/fca"
+}

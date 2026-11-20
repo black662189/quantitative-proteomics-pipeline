@@ -1,0 +1,19 @@
+{
+  "code": "ssc",
+  "taxid": 9823,
+  "name": "猪",
+  "resources": [
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Sscrofa11.1_NCBI_release_106/ssc.kegg_optimal.symbol.gmt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/KEGG.gmt",
+      "sha256": "fe9a5db7946b08af027c18adbb161d85b341b6231cdaf4eff70f0bb50916e415"
+    },
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Sscrofa11.1_NCBI_release_106/rename.uniq.9823.protein.links.v11.0.txt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/PPI.tsv",
+      "sha256": "006e3b758c5ad2cb73580171af9a54d6c7cbc84beb957f8674a6772e43739bc0"
+    }
+  ],
+  "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/species.yaml",
+  "validation": "database integrity only; biological example validated only for hsa/fca"
+}

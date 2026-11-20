@@ -1,0 +1,318 @@
+{
+  "snapshot_date": "2026-11-20",
+  "source_root": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics",
+  "files": [
+    {
+      "path": "README_流程使用说明.md",
+      "sha256": "a4817b916e0a84ed36ff8990dbd5d46661e18339a6ee93f1e2d12723a10ae1f5",
+      "bytes": 12260,
+      "symlink": false
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "d118af3369f9a71dbbd87775c9fe9d48addf2b1095611f8a3b19fde7a0cecb0f",
+      "bytes": 6426,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/README.md",
+      "sha256": "200551e1ae0b0a6adb4dfcc7cbb72bd2ef743e252f567828333888cb15ff9a1b",
+      "bytes": 8464,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/README_移植说明.md",
+      "sha256": "bc1c93710f9b2549442ca4ff211faf42da4c20c30fe3ea7eca2385a0000e2bf8",
+      "bytes": 4831,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/00_build_gmt.R",
+      "sha256": "7ff7e852aeb552b27304e9529bdcb3e8c2d1d5fa8f3d67892d1b5c6c3f9738f9",
+      "bytes": 3870,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/00_convert_ima94.py",
+      "sha256": "b42955c0a4f97675b4eec8a59db22c32b9e98034daf663f4bf1f0b884d632b6b",
+      "bytes": 4003,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/00_convert_pd_tmt.py",
+      "sha256": "c56434eba70aef1aaf3f511f273e0c0da98d2fdeaab87b50d6fda91a76e7936b",
+      "bytes": 4380,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/01_process_standard.R",
+      "sha256": "20eba694124c75bc01c32ac613df5e90276096e716670afde9b69717abf40b28",
+      "bytes": 5595,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/02_cluster_pca.R",
+      "sha256": "d3e799cc24e95a80ef9f25f8240b26f98dcc560ad6e6a2c27a852b6091efdc25",
+      "bytes": 10683,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/03_DE_limma.R",
+      "sha256": "2c3a2315f430a61fafdf2fcd22de87fd3c3f2bef370f305cae896230a2b0b399",
+      "bytes": 3716,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/03b_volcano.R",
+      "sha256": "055b05c24383b5debcbd15db21f0fbb8a5c3cfdce68ecfd1f3c4197d907d1739",
+      "bytes": 4388,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/04_ORA_enrichment.R",
+      "sha256": "d67a87fd5cb869f3cf3623ffa556cd3f49a78d9ff38406873fbaf7f6f5738942",
+      "bytes": 5632,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/05_full_GSEA.R",
+      "sha256": "534c7afb9ee64b3487f1c48760f6f7a3972f794192ea343a701bbe6aaf976e0f",
+      "bytes": 2859,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/06_GSEA_plots.R",
+      "sha256": "858c79a799fef8258039326615275906aa12c9a98fed450cc549efab9a5d7244",
+      "bytes": 4405,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/07a_prepare_GSVA_input.R",
+      "sha256": "671077c5d2c2710ea0e474c1aec0c0c865d738ea831a91921821d72990ab408d",
+      "bytes": 1891,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/07b_GSVA_calc.R",
+      "sha256": "6794f854f149674e42f57f4563762c74e45723e261512e26366b05a3bd3666b5",
+      "bytes": 1196,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/07c_GSVA_top_heatmap.R",
+      "sha256": "60213e9a6d2e00f071de9844f3e7da004e6541d33868a352fdc4957fc6716ca2",
+      "bytes": 6341,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/08a_pathway_protein_heatmaps.R",
+      "sha256": "fd3864a3bffa217fbcd4ab1dc85f3009d864bd4050f4aa3228f4ed544ca57358",
+      "bytes": 3535,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/08b_GSEA_leading_heatmaps.R",
+      "sha256": "05bbd56bb9625402b7d500f0cbdef088bcaaf1c1065eda5da0b062556bcfc56b",
+      "bytes": 3752,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/bin/make_report.py",
+      "sha256": "0321c532825dac0a7939de64944325fa5607a3936cd71cc103e5895b44f060c5",
+      "bytes": 30781,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/config.sh",
+      "sha256": "145d88f11c887d8fc1018990fb331d714571c04b566eb6e9f963328e549b73fa",
+      "bytes": 4470,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/config.user.template.sh",
+      "sha256": "087981d614fd78b199a6a68dbe6743c35aedb197462b7cec54b96c3ee9615864",
+      "bytes": 4679,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/lib/heatmap/heatmap_light.r",
+      "sha256": "ba29eb21dcb3c95525a1ad4ad8d23cb625fa990bafd523e5cb1c51eb33db1e87",
+      "bytes": 5535,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/lib/heatmap/lollipop_plot.r",
+      "sha256": "4b77a8ae9f9927df36911e5bf81b26da0a92ec532273496b6b97b37e1b1beb7a",
+      "bytes": 5233,
+      "symlink": false
+    },
+    {
+      "path": "alt_chen/run_pipeline.sh",
+      "sha256": "041daae5169d5174385e41be22471389e83ec648acdf62b9e4b5f9ce57efbd60",
+      "bytes": 4734,
+      "symlink": false
+    },
+    {
+      "path": "env/requirements.lock.txt",
+      "sha256": "5e17f9bba6144e3426f23540638d4766f355f376ceeb184f9fe7772e8b0c9e25",
+      "bytes": 309,
+      "symlink": false
+    },
+    {
+      "path": "env/requirements.txt",
+      "sha256": "451d0dc7647281b2211d7304105cbdbb638f9a3bbe782350286fc394c9d3463d",
+      "bytes": 106,
+      "symlink": false
+    },
+    {
+      "path": "proteomics.py",
+      "sha256": "9a0e64a14feca744fe34d7689acbbdf51a96140608312155826b4c0bd1492629",
+      "bytes": 40951,
+      "symlink": false
+    },
+    {
+      "path": "report_template/report_interactive.css",
+      "sha256": "755b06e75807b11d36b39361d59b32d5cdde2ac96a9ba55cae69b9536d049afc",
+      "bytes": 6175,
+      "symlink": false
+    },
+    {
+      "path": "report_template/report_interactive.html",
+      "sha256": "57f3e80b23008f34a3db9e304420a8a3d9aed0aa2f58bd220256920ea2380e11",
+      "bytes": 15713,
+      "symlink": false
+    },
+    {
+      "path": "report_template/report_interactive.js",
+      "sha256": "a710a335efd9d5d564accb4e6d22b6b813e689e5e3dc2e06f73081b485dae804",
+      "bytes": 18089,
+      "symlink": false
+    },
+    {
+      "path": "report_template/report_modules.js",
+      "sha256": "f1c049016e1db8bcbc5cdd60adf6e96c5640de988d3036451991778e6ac77c2f",
+      "bytes": 22386,
+      "symlink": false
+    },
+    {
+      "path": "report_template/style.css",
+      "sha256": "5547d1dbfcb5318e1b5c0e822001b6b63535e5a497e61d55035b460f89e6104e",
+      "bytes": 1362,
+      "symlink": false
+    },
+    {
+      "path": "report_template/table.js",
+      "sha256": "e7c9f566a183f1ef3655b82f60ad0a2f200ed92806e95187e70af77c5599a8c7",
+      "bytes": 731,
+      "symlink": false
+    },
+    {
+      "path": "scripts/differential.R",
+      "sha256": "cf1901c2339f1260d3ce5b406ba9f2c4074c01ba9f1e7af4d98aae50d3f2d875",
+      "bytes": 3273,
+      "symlink": false
+    },
+    {
+      "path": "scripts/pathways.R",
+      "sha256": "6a3e65992ed315acfd0322c5e6e22f0c3a6801a72666abd2b7445cd8fbc1b840",
+      "bytes": 5714,
+      "symlink": false
+    },
+    {
+      "path": "tests/INTERACTIVE_VALIDATION.md",
+      "sha256": "624326b95f083c6c1c627eb897ecc036c729d56947c170e367408546a00c3cd3",
+      "bytes": 1453,
+      "symlink": false
+    },
+    {
+      "path": "tests/check_pathways.py",
+      "sha256": "aac6d497c184407c594c1d7ca131f5b3205464de313ab102fcd997c85e778200",
+      "bytes": 3324,
+      "symlink": false
+    },
+    {
+      "path": "tests/package-lock.json",
+      "sha256": "69089aadec7a9c0f8bedea9763c3bd65f08f7fdeab101291840c6336ecb91fc3",
+      "bytes": 18627,
+      "symlink": false
+    },
+    {
+      "path": "tests/package.json",
+      "sha256": "70874a2b17efd200aba990a6fd272b71b819a7df85e5c22fbd17f7396c93e948",
+      "bytes": 136,
+      "symlink": false
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "sha256": "20d0e8fe18bd5b67bea0c58533d96b881d9317891982c9dc2012475d18d7e901",
+      "bytes": 4447,
+      "symlink": false
+    },
+    {
+      "path": "tests/verify_interactive.cjs",
+      "sha256": "1515312d565166c0493d29a8dcba52fb036d8e75e0262cf950e5405df9c87e42",
+      "bytes": 11719,
+      "symlink": false
+    },
+    {
+      "path": "tools/all.sh",
+      "sha256": "41faf7a4f13f0158d5fae7ae99a9ab0eaf7ef78e707dedce55f98d0c40b27e7f",
+      "bytes": 288,
+      "symlink": false
+    },
+    {
+      "path": "tools/build_interactive_report.py",
+      "sha256": "b7d3e3a0c64aef4242fea3a15deb7ed95418743b19efe5ac328407540181c15a",
+      "bytes": 5021,
+      "symlink": false
+    },
+    {
+      "path": "tools/download_go.py",
+      "sha256": "8db1ab83f2e4ca87d0a363b7d5ae2ee010dc8ee625752c81d0c6134fdfdc4a0a",
+      "bytes": 1866,
+      "symlink": false
+    },
+    {
+      "path": "tools/expand_species.py",
+      "sha256": "7615798d597f0ed3a0fb0c8bf8996a5a37cd4b19c536c7d6bab56fd42d4a772b",
+      "bytes": 2434,
+      "symlink": false
+    },
+    {
+      "path": "tools/report_data.py",
+      "sha256": "96ca08abcb2d4fe30213cf7e6d1eaeaa35ed36efc0746a08cb5a2ccdca7b9d36",
+      "bytes": 4336,
+      "symlink": false
+    },
+    {
+      "path": "tools/run_examples.sh",
+      "sha256": "4f008bfc721d61c9534f01fb8b1fe7ae0e24fd719958706a961972c42cce02fd",
+      "bytes": 667,
+      "symlink": false
+    },
+    {
+      "path": "tools/verify_results.py",
+      "sha256": "eb35cb9e0b48eb27024d5e9c271f2945863d241896d8527cd700fdab29e80090",
+      "bytes": 5558,
+      "symlink": false
+    },
+    {
+      "path": "tools/verify_species.py",
+      "sha256": "676cbbfedebb94fb452aca908c5f5d38402bf42f60fe718bec6bc53de0be1d90",
+      "bytes": 1511,
+      "symlink": false
+    },
+    {
+      "path": "vendor/Plotly-LICENSE.txt",
+      "sha256": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7",
+      "bytes": 1086,
+      "symlink": false
+    },
+    {
+      "path": "vendor/plotly-3.1.0.min.js",
+      "sha256": "122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770",
+      "bytes": 4763993,
+      "symlink": false
+    }
+  ]
+}

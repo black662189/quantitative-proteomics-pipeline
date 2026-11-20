@@ -1,0 +1,17 @@
+[
+  {
+    "directory": "depends",
+    "top_level_entries": [
+      "cfa",
+      "fca",
+      "hsa",
+      "mcc",
+      "mcf",
+      "mmu",
+      "provenance.json",
+      "rno",
+      "species_registry.json",
+      "ssc"
+    ]
+  }
+]

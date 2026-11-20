@@ -1,0 +1,19 @@
+{
+  "code": "mmu",
+  "taxid": 10090,
+  "name": "小鼠",
+  "resources": [
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_mmu_GRCm38.p6_Ensembl_release_96/mmu.kegg_optimal.symbol.gmt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/KEGG.gmt",
+      "sha256": "bcf7adf16de191566883a1afa20115df2d1a01bbdf839766924f32a34a9839e6"
+    },
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_mmu_GRCm38.p6_Ensembl_release_96/rename.uniq.10090.protein.links.v10.5.txt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/PPI.tsv",
+      "sha256": "739d0b95833c1d0e973eeb0b9e064af1e090cbf31ac8b5ca7ab672e5576ad5d6"
+    }
+  ],
+  "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/species.yaml",
+  "validation": "database integrity only; biological example validated only for hsa/fca"
+}

@@ -1,0 +1,26 @@
+species: mcc
+taxid: 9544
+gene_sets:
+- name: KEGG
+  taxid: 9544
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/KEGG.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_BP
+  taxid: 9544
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/GO_BP.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_CC
+  taxid: 9544
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/GO_CC.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_MF
+  taxid: 9544
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/GO_MF.gmt
+  min_size: 5
+  max_size: 500
+ppi:
+  taxid: 9544
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/PPI.tsv

@@ -1,0 +1,154 @@
+[
+  {
+    "code": "hsa",
+    "taxid": 9606,
+    "name": "人",
+    "resources": [
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_hsa_GRCh38.p13_Ensembl_release_89/hsa.kegg_optimal.symbol.gmt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/hsa/KEGG.gmt",
+        "sha256": "9d825aa11aff2d9abb14aa105a3abe285594438f439524dd99769492fe1f25c1"
+      },
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_hsa_GRCh38.p13_Ensembl_release_89/rename.uniq.9606.protein.links.v11.0.txt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/hsa/PPI.tsv",
+        "sha256": "e6c2c2b20b26ca25ecba611c36aeb281f408de963bcc52093440ab9da4aeb673"
+      }
+    ],
+    "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/hsa/species.yaml",
+    "validation": "database integrity only; biological example validated only for hsa/fca"
+  },
+  {
+    "code": "fca",
+    "taxid": 9685,
+    "name": "猫",
+    "resources": [
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_F.catus_Fca126_mat1.0_NCBI_release_105/fca.kegg_optimal.symbol.gmt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/fca/KEGG.gmt",
+        "sha256": "3e0c91f9a203b450053c827aa7e2e0e6191a4d9587f518bfde0f473aec57fe44"
+      },
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_F.catus_Fca126_mat1.0_NCBI_release_105/rename.uniq.9685.protein.links.v12.0.txt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/fca/PPI.tsv",
+        "sha256": "8c35115a5a7def98f737a98c821604e4f6193fa6f110d0ea65d8b6674b8b2fcb"
+      }
+    ],
+    "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/fca/species.yaml",
+    "validation": "database integrity only; biological example validated only for hsa/fca"
+  },
+  {
+    "code": "mmu",
+    "taxid": 10090,
+    "name": "小鼠",
+    "resources": [
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_mmu_GRCm38.p6_Ensembl_release_96/mmu.kegg_optimal.symbol.gmt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/KEGG.gmt",
+        "sha256": "bcf7adf16de191566883a1afa20115df2d1a01bbdf839766924f32a34a9839e6"
+      },
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_mmu_GRCm38.p6_Ensembl_release_96/rename.uniq.10090.protein.links.v10.5.txt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/PPI.tsv",
+        "sha256": "739d0b95833c1d0e973eeb0b9e064af1e090cbf31ac8b5ca7ab672e5576ad5d6"
+      }
+    ],
+    "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/species.yaml",
+    "validation": "database integrity only; biological example validated only for hsa/fca"
+  },
+  {
+    "code": "rno",
+    "taxid": 10116,
+    "name": "大鼠",
+    "resources": [
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_rno_Rnor_6.0_Ensembl_release_90/rno.kegg_optimal.symbol.gmt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/KEGG.gmt",
+        "sha256": "f6ba4e530176890449532abc47367033bcf7e6e98707447c1bf67357c7f0c95f"
+      },
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_rno_Rnor_6.0_Ensembl_release_90/rename.uniq.10116.protein.links.v11.0.txt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/PPI.tsv",
+        "sha256": "7581d7bbe4309d73402be3c5d3d6ea975af0f5a031c94e9fbd941a792df8fdb7"
+      }
+    ],
+    "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/species.yaml",
+    "validation": "database integrity only; biological example validated only for hsa/fca"
+  },
+  {
+    "code": "cfa",
+    "taxid": 9615,
+    "name": "犬",
+    "resources": [
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_ROS_Cfam_1.0_NCBI_release_106/cfa.kegg_optimal.symbol.gmt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/cfa/KEGG.gmt",
+        "sha256": "9083fe42cb248d7eb75c6f4e28ca8d8f6d0918a3d797f31b11b546dc5b6b9a03"
+      },
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_ROS_Cfam_1.0_NCBI_release_106/rename.uniq.9615.protein.links.v11.5.txt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/cfa/PPI.tsv",
+        "sha256": "cb5db0ca56a3650f804d1697f8866a16dd3899a57e037196af9b2b4c6a6650f2"
+      }
+    ],
+    "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/cfa/species.yaml",
+    "validation": "database integrity only; biological example validated only for hsa/fca"
+  },
+  {
+    "code": "ssc",
+    "taxid": 9823,
+    "name": "猪",
+    "resources": [
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Sscrofa11.1_NCBI_release_106/ssc.kegg_optimal.symbol.gmt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/KEGG.gmt",
+        "sha256": "fe9a5db7946b08af027c18adbb161d85b341b6231cdaf4eff70f0bb50916e415"
+      },
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Sscrofa11.1_NCBI_release_106/rename.uniq.9823.protein.links.v11.0.txt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/PPI.tsv",
+        "sha256": "006e3b758c5ad2cb73580171af9a54d6c7cbc84beb957f8674a6772e43739bc0"
+      }
+    ],
+    "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/ssc/species.yaml",
+    "validation": "database integrity only; biological example validated only for hsa/fca"
+  },
+  {
+    "code": "mcf",
+    "taxid": 9541,
+    "name": "食蟹猴",
+    "resources": [
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Mfa_MFA1912RKSv2_NCBI_release_102/mcf.kegg_optimal.symbol.gmt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/KEGG.gmt",
+        "sha256": "045ebe35bd85e2591585d336668590f573877da28dcca8061aae7579f14125a8"
+      },
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Mfa_MFA1912RKSv2_NCBI_release_102/rename.uniq.9541.protein.links.v11.0.ensemble.v2.txt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/PPI.tsv",
+        "sha256": "7d14d15c562380cacd9ee0793a22d3314e6a3401f882ad924ea500e7ed27cd60"
+      }
+    ],
+    "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/species.yaml",
+    "validation": "database integrity only; biological example validated only for hsa/fca"
+  },
+  {
+    "code": "mcc",
+    "taxid": 9544,
+    "name": "恒河猴",
+    "resources": [
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Mmul_10_NCBI_release_103/mcc.kegg_optimal.symbol.gmt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/KEGG.gmt",
+        "sha256": "027267fef35e37bf7ec631a12e0736915dfc035a70b7c1072e014b8db97778c9"
+      },
+      {
+        "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Mmul_10_NCBI_release_103/9544.protein_symbol.PPI.txt",
+        "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/PPI.tsv",
+        "sha256": "42cf52eeb243a14d878db4753dfd7aefa59841dd8bc6d70c326e1fa6835f7141"
+      }
+    ],
+    "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcc/species.yaml",
+    "validation": "database integrity only; biological example validated only for hsa/fca"
+  }
+]

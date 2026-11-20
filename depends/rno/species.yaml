@@ -1,0 +1,26 @@
+species: rno
+taxid: 10116
+gene_sets:
+- name: KEGG
+  taxid: 10116
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/KEGG.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_BP
+  taxid: 10116
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/GO_BP.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_CC
+  taxid: 10116
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/GO_CC.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_MF
+  taxid: 10116
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/GO_MF.gmt
+  min_size: 5
+  max_size: 500
+ppi:
+  taxid: 10116
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/rno/PPI.tsv

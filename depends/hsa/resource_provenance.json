@@ -1,0 +1,19 @@
+{
+  "code": "hsa",
+  "taxid": 9606,
+  "name": "人",
+  "resources": [
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_hsa_GRCh38.p13_Ensembl_release_89/hsa.kegg_optimal.symbol.gmt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/hsa/KEGG.gmt",
+      "sha256": "9d825aa11aff2d9abb14aa105a3abe285594438f439524dd99769492fe1f25c1"
+    },
+    {
+      "source": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_hsa_GRCh38.p13_Ensembl_release_89/rename.uniq.9606.protein.links.v11.0.txt",
+      "path": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/hsa/PPI.tsv",
+      "sha256": "e6c2c2b20b26ca25ecba611c36aeb281f408de963bcc52093440ab9da4aeb673"
+    }
+  ],
+  "config": "/media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/hsa/species.yaml",
+  "validation": "database integrity only; biological example validated only for hsa/fca"
+}

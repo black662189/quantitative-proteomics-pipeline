@@ -1,0 +1,26 @@
+species: mcf
+taxid: 9541
+gene_sets:
+- name: KEGG
+  taxid: 9541
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/KEGG.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_BP
+  taxid: 9541
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/GO_BP.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_CC
+  taxid: 9541
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/GO_CC.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_MF
+  taxid: 9541
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/GO_MF.gmt
+  min_size: 5
+  max_size: 500
+ppi:
+  taxid: 9541
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mcf/PPI.tsv

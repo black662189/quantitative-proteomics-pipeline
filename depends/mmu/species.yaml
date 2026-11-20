@@ -1,0 +1,26 @@
+species: mmu
+taxid: 10090
+gene_sets:
+- name: KEGG
+  taxid: 10090
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/KEGG.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_BP
+  taxid: 10090
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/GO_BP.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_CC
+  taxid: 10090
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/GO_CC.gmt
+  min_size: 5
+  max_size: 500
+- name: GO_MF
+  taxid: 10090
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/GO_MF.gmt
+  min_size: 5
+  max_size: 500
+ppi:
+  taxid: 10090
+  path: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/proteomics/depends/mmu/PPI.tsv

@@ -1,0 +1,12 @@
+body{margin:0;font:16px/1.85 "Microsoft YaHei","Noto Sans CJK SC",sans-serif;color:#2f3542;background:white}
+aside{position:fixed;width:235px;top:0;bottom:0;background:#293b50;color:white;overflow:auto;padding:20px 0}
+aside h2{font-size:20px;text-align:center;color:#ffffff}aside a{display:block;padding:10px 22px;color:#edf3fa;text-decoration:none}
+aside a:hover{background:#466483}main{margin-left:250px;max-width:1150px;padding:30px 42px}
+header{text-align:center;border-bottom:3px solid #41698e;padding:25px 0}h1{font-size:30px}h2{color:#315a7b}h3{border-left:4px solid #91b2cc;padding-left:12px}
+section{margin:40px 0}p{text-align:justify}table{border-collapse:collapse;display:block;overflow:auto;width:100%;font-size:13px}
+th{background:#365b7c;color:white;cursor:pointer}th,td{padding:8px 12px;border-bottom:1px solid #dce3ea;white-space:nowrap}
+tr:nth-child(even){background:#f1f5f9}.search{padding:8px;margin:8px 0;border:1px solid #a8bbcb;width:280px}
+figure{margin:25px auto;text-align:center}figure img{max-width:100%;max-height:650px}figcaption{font-size:14px;color:#506174}
+a{color:#28668d}li{overflow-wrap:anywhere}section{scroll-margin-top:20px}
+@media(max-width:850px){aside{position:static;width:auto}main{margin:0;padding:20px}}
+@media print{aside,.search{display:none}main{margin:0;padding:0}figure{break-inside:avoid}table{font-size:10px}}
